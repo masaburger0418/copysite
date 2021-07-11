@@ -1,0 +1,44 @@
+@include screen-1200 {
+  .c-btn {
+
+    //ハンバーガーメニュー  縦棒（｜）表示
+    &--plus > a::before {
+      content: "";
+      transform:rotate(90deg);
+      width: 2.4rem;
+      height: 0.15rem;
+      background-color: black;
+      display: block;
+      position: absolute;
+      right: 1.3rem;
+      top: 2.25rem;
+    }
+
+    //ハンバーガーメニュー  横棒（－）表示
+    &--plus > a::after {
+      content: "";
+      width: 2.4rem;
+      height: 0.15rem;
+      background-color: black;
+      display: block;
+      position: absolute;
+      right: 1.3rem;
+      top: 2.25rem;
+    }
+  }
+
+  //jQuery用 toggleClassで縦棒から幅、高さを持たせて背景色をつける
+  .is-open {
+
+    & > a::before {
+      width: 5rem;
+      height: 5rem;
+      background-color: #f7f7f7;
+      /* background:rgba(247,247,247,1); */
+      right: 0rem;
+      top: 0rem;;
+    }
+
+  }
+
+}

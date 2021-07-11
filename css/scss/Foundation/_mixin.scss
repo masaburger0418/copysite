@@ -1,0 +1,31 @@
+//メディアクエリ
+
+@mixin screen-1280 {
+  @media (max-width:$laptop1) {
+    @content;
+  }
+}
+
+@mixin screen-1260 {
+  @media (max-width:$laptop2) {
+    @content;
+  }
+}
+
+@mixin screen-1200 {
+  @media (max-width:$laptop3) {
+    @content;
+  }
+}
+
+@mixin screen-1028 {
+  @media (max-width:$laptop4) {
+    @content;
+  }
+}
+
+@mixin screen-766 {
+  @media (max-width:$sp) {
+    @content;
+  }
+}

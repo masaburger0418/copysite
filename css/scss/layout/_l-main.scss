@@ -1,0 +1,18 @@
+.l-main {
+  width: 100%;
+
+  &__container {
+    max-width: 1078px;
+    margin: 0 auto;
+  }
+}
+
+@include screen-1028 {
+  .l-main {
+
+    &__container {
+      margin: 0 1rem;
+    }
+
+  }
+}

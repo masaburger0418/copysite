@@ -1,0 +1,88 @@
+//ハンバーガーメニューボタン
+.p-hamburger {
+  font-size:0;//menuボタンという文字消す
+  width:5rem;
+  height:5rem;
+  background-color: #fff;
+  transition-duration: 0.5s;//徐々に背景色が変わっていく
+  display: none;//レスポンシブ1200以下で表示
+
+  //ハンバーガーボタン上の線
+  &::before {
+    content:"";
+    width:2.3rem;
+    height:0.2rem;
+    background-color:#2498B3;
+    position:absolute;
+    left:1.5rem;
+    top:1.7rem;
+    display:block;
+    transition:transform 0.2s;
+  }
+
+  //ハンバーガーボタン下の線
+  &::after {
+    content:"";
+    width:2.3rem;
+    height:0.2rem;
+    background-color:#2498B3;
+    position:absolute;
+    left:1.5rem;
+    top:3.3rem;
+    display:block;
+    transition:transform 0.2s;
+  }
+
+  //ハンバーガーボタン真ん中の線
+  span {
+    width:2.3rem;
+    height:0.2rem;
+    background-size: auto 1px;
+    position:absolute;
+    left:1.5rem;
+    top:50%;
+    transition:transform 0.2s;
+    background : linear-gradient( to right, #2498B3, #2498B3 ) repeat-x #2498B3;
+  }
+
+}
+
+.is-open {
+
+  background-color: #2498b3;
+  transition-duration: 0.5s;//徐々に背景色が変わっていく
+
+  &::before {
+    transform:rotate(45deg);//時計回りに45度回転
+    top:50%;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+
+  &::after {
+    transform:rotate(-45deg);//反時計回りに45度回転
+    top:50%;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+
+  span {
+    display:none;
+    transition: 0.2s;
+  }
+
+}
+
+body.is-open {
+	position: fixed;
+}
+
+
+@include screen-1200 {
+  .p-hamburger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

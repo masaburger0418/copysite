@@ -1,0 +1,131 @@
+  .p-mainvisual {
+  display: flex;
+  justify-content: center;
+  background: url(../images/bg-hero3.png) no-repeat center center;
+  background-size: cover;
+  height: 650px  /* 100vh */;
+  position: relative;
+  /* top: 7rem; */
+  z-index: 1;
+  background-attachment: fixed;
+  overflow: hidden;
+
+  &__wrap {
+    padding-top: 7rem;
+    overflow: hidden;
+  }
+
+  &__content {
+    background-color: #FFFFFF;
+    text-align: center;
+    width: 41.5rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    position: absolute;
+    top: 8rem;
+    z-index: 300;
+
+    &_logo {
+      width: 28rem;
+      padding-top: 4rem;
+    }
+
+    &_txt {
+      font-size: 1.6rem;
+      font-weight: bolder;
+      padding-top: 1.2rem;
+      padding-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    &_btn {
+      text-decoration: none;
+      display: inline-block;
+      color: #FFFFFF;
+      background-color: #2498b3;
+      font-size: 1.8rem;
+      font-weight: 600;
+      padding: 2.1rem 3.7rem;
+      margin-bottom: 3rem;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__layer1 {
+    height: 100%;
+    width: 100%;
+    background: url(../images/bg-hero1.png) no-repeat center center;
+    position: absolute;
+    z-index: 200;
+    overflow: hidden;
+  }
+
+  &__layer2 {
+    height: 100%;
+    width: 100%;
+    background: url(../images/bg-hero2.png) no-repeat center center;
+    position: absolute;
+    z-index: 100;
+    overflow: hidden;
+  }
+
+} 
+
+@include screen-1200 {
+  .p-mainvisual {
+
+    &__wrap {
+      padding-top:5rem;
+    }
+
+  }
+}
+
+@include screen-766 {
+  .p-mainvisual {
+    
+      height: 30rem;
+      padding-bottom:32rem;
+      background-position: center -2.5rem;
+
+      &__wrap {
+        padding-top: 5rem;
+      }
+      
+      &__content {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        top: 16.5rem;
+        padding-bottom: 2rem;
+        padding-top: 0.5rem;
+  
+        &_logo {
+          display: none;
+        }
+  
+        &_txt {
+          font-size: 1.3rem;
+          padding-bottom: 1.3rem;
+        }
+  
+        &_btn {
+          font-size: 1.6rem;
+          padding: 0.9rem 1.8rem;
+          margin-bottom: 1.3rem;
+        }
+      }
+
+    &__layer1 {
+      background-size: cover;
+      background-position: center -3rem;
+    }
+
+    &__layer2 {
+      background-size: cover;
+      background-position: center -2.5rem;
+    }
+
+
+  }
+}
